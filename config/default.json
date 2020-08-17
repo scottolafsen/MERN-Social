@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://Scott:Snowbird1@mern.53z2z.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "d43351353fbac12ad47d",
+  "githubSecret": "afaf0c6584559d295bf202548b8f5a449521cc1d"
+}
