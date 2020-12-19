@@ -8,7 +8,7 @@ const { check, validationResult } = require('express-validator');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
-const nodemon = require('nodemon');
+// const nodemon = require('nodemon');
 
 // @route   GET api/profile/me
 // @desc    Get current users profile
