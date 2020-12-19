@@ -23,8 +23,8 @@ router.post(
 
       const newPost = new Post({
         text: req.body.text,
-        name: req.user.name,
-        avatar: req.user.avatar,
+        name: user.name,
+        avatar: user.avatar,
         user: req.user.id,
       });
 
@@ -100,9 +100,10 @@ router.delete('/:id', auth, async (req, res) => {
 // @access  Private
 router.put('/like/:id', auth, async (req, res) => {
   try {
+    console.log(req);
     const post = await Post.findById(req.params.id);
-
-    // Check if the post has a;ready been liked
+    console.log(post);
+    // Check if the post has already been liked
     if (
       post.likes.filter((like) => like.user.toString() === req.user.id).length >
       0
@@ -169,9 +170,9 @@ router.post(
 
       const newComment = new Post({
         text: req.body.text,
-        name: req.user.name,
-        avatar: req.user.avatar,
-        user: req.user.id,
+        name: user.name,
+        avatar: user.avatar,
+        user: user.id,
       });
 
       post.comments.unshift(newComment);
